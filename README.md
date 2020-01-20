@@ -1,9 +1,8 @@
 # waterOrders
 1.	Place New water order
 
-End points:  http://localhost:8080/orders
-
-Method:POST
+        End points:  http://localhost:8080/orders
+        Method:POST
 
 Request Body
 
@@ -27,22 +26,19 @@ Request Body
  
 2.	Get all Orders
 
-End Points: http://localhost:8080/orders
+        End Points: http://localhost:8080/orders
+        Method:GET
 
-Method:GET
 
+    2.1 Get details of given orderId
 
- 
-2.1 Get details of given orderId
-End Points: http://localhost:8080/orders/{orderId}
-
-METHOD:GET
+        End Points: http://localhost:8080/orders/{orderId}
+        METHOD:GET
 
 3.	Cancel order
 
-End Points: http://localhost:8080/orders/{orderId}
-
-METHOD:DELETE
+        End Points: http://localhost:8080/orders/{orderId}
+        METHOD:DELETE
 
 
 
