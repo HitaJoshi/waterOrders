@@ -1,0 +1,33 @@
+Configuration:
+  name: Default
+  properties:
+    property:
+      name: filename
+  thresholdFilter:
+    level: debug
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%m%n"
+    File:
+      name: File
+      fileName: ${filename}
+      PatternLayout:
+        Pattern: "%d %p %C{1.} [%t] %m%n"
+      Filters:
+        ThresholdFilter:
+          level: error
+ 
+  Loggers:
+    logger:
+      -
+        name: com.rubicon.waterOrderApi.restController
+        level: debug
+        additivity: false
+        AppenderRef:
+          ref: File
+    Root:
+      level: error
+      AppenderRef:
+        ref: STDOUT
