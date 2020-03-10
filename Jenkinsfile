@@ -1,13 +1,13 @@
-
-node{
-  stage('Get Git code'){
-  git 'https://github.com/HitaJoshi/waterOrders.git'
-  }
-  pipeline {
+pipeline {
   agent any
   tools {
     maven 'M3'
   }
+node{
+  stage('Get Git code'){
+  git 'https://github.com/HitaJoshi/waterOrders.git'
+  }
+  
   stage('compile and package'){
   //def mvnHome = tool name: 'M3', type: 'maven'
    def mvn_version = 'M3'
